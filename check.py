@@ -48,7 +48,10 @@ def check_confirm_operation(input_string: Optional[str]) -> Optional[int]:
                   '\nНеверный ввод данных! Должно быть целое число: 1 или 2!')
 
 
-def check_double_surname(text):
+def check_double_surname(text: Optional[str]):
+    '''
+    Функция работы с двойными фамилиями и переводом в верхний регистр первых букв составных частей фамилии.
+    '''
     while len(text) > 40:
         print(Fore.GREEN + Back.RED)
         text = input(
@@ -62,7 +65,7 @@ def check_double_surname(text):
         return text
 
 
-def check_textfield(text, optional=1):
+def check_textfield(text: str, optional=1):
     '''
     Функция проверяет ввод текстового поля (обязательного: optional = 1 (по умолчанию), необязательного: optional = 0).
     '''
@@ -102,7 +105,7 @@ def check_textfield(text, optional=1):
                         'Неверный ввод данных! Должны быть только буквы русского алфавита. Не менее 2 и не более 40 символов. Повторите ввод:\n')
 
 
-def check_free_textfield(text):
+def check_free_textfield(text: str):
     '''
     Функция проверяет ввод текстового поля свободного содержания.
     '''
@@ -117,7 +120,7 @@ def check_free_textfield(text):
             return text
 
 
-def check_mobile(text):
+def check_mobile(text: str):
     '''
     Функция проверяет корректность ввода мобильного телефона.
     '''
@@ -150,7 +153,7 @@ def check_mobile(text):
             continue
 
 
-def check_homephone(text):
+def check_homephone(text: str):
     '''
     Функция проверяет корректность ввода домашнего телефона.
     '''
@@ -181,7 +184,7 @@ def check_homephone(text):
 
 def remove_spaces_in_string(text: Optional[str]) -> Optional[str]:
     '''
-    Чистит строку - удаляет все пробелы.
+    Функция чистит строку - удаляет все пробелы.
     '''
     text = text.replace(' ', '')
     return text

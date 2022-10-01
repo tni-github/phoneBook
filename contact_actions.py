@@ -120,7 +120,7 @@ def open_phonebook():
 
 def delete_contact(data):
     '''
-    Фунция удаляет найденный контакт.
+    Фунция удаляет найденный контакт. НЕ ДОРАБОТАНА!
     '''
     try:
         open('contacts.csv')
